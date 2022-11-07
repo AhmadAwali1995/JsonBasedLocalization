@@ -1,0 +1,15 @@
+﻿@model CreateTestViewModel
+@inject IViewLocalizer localizer
+
+<form method="post">
+    <div>
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control"/>
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">@localizer["save"]</button>
+</form>
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial"/>
+}
